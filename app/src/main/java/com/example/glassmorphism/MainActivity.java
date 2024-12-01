@@ -37,15 +37,10 @@ public class MainActivity extends AppCompatActivity {
         float radius = 20f;
 
         View decorView = getWindow().getDecorView();
-        // ViewGroup you want to start blur from. Choose root as close to BlurView in hierarchy as possible.
+        
         ViewGroup rootView = decorView.findViewById(R.id.main);
-
-        // Optional:
-        // Set drawable to draw in the beginning of each blurred frame.
-        // Can be used in case your layout has a lot of transparent space and your content
-        // gets a too low alpha value after blur is applied.
-
-        blurView.setupWith(rootView, new RenderEffectBlur()) // or RenderEffectBlur
+        
+        blurView.setupWith(rootView, new RenderEffectBlur())
                 .setBlurAutoUpdate(true)
                 .setBlurRadius(radius);
 
